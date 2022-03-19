@@ -2,12 +2,12 @@
 layout: post
 title: Sentiment Analysis, Text Classification
 date: 2022-03-19 18:50:00
-categories: [nlp]
+categories: [posts]
 tags: [nlp, subtask, sentiment, txt_classification]
 description: nlp subtask 2개 조사
 comments: true
 ---
-# Week1-1 과제(최지나)
+# Sentiment Analysis, Text Classification (feat. 원티드 프리온보딩)
 
 ### 1. 본인이 본 강의를 수강하는 목적에 대해서 자유롭게 적어보세요.
 
