@@ -8,7 +8,7 @@ description: nlp subtask 2개 조사
 comments: true
 ---
 
-- ****Sentiment Analysis****
+***Sentiment Analysis****
     1. 문제 정의
     주어진 텍스트에 대하여 극성을 분류하는 것(긍정, 부정, 중립)
     2. 데이터 소개
