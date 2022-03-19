@@ -17,7 +17,7 @@ published: true
         아래 이미지를 보면 LexGLUE dataset 구축 후 성능 확인을 위한 task를 확인할 수 있음. 
         이를 통해 ‘어느 법’인지와 법에 대한 ‘검색’ 기능이 법률 영역의 다양한 업무를 보조 해주는 주요 기술임을 유추 가능
         
-        ![Untitled](Week1-2%20%E1%84%80%E1%85%AA%208aa8e/Untitled.png)
+        ![Untitled](https://user-images.githubusercontent.com/94058241/159118152-295fda5d-024f-4b43-923f-183fdc122551.png)
         
     2. 데이터 소개
     1) [LeXGLUE](https://paperswithcode.com/dataset/lexglue)
@@ -44,7 +44,7 @@ published: true
         5. Longformer
         6. RoBERTa
         
-        ![Untitled](Week1-2%20%E1%84%80%E1%85%AA%208aa8e/Untitled%201.png)
+        ![Untitled 1](https://user-images.githubusercontent.com/94058241/159118105-13f6fed4-bd00-4473-8360-beacf162ddb2.png)
         
     2. 논문 요약 키워드
         
@@ -52,7 +52,7 @@ published: true
         
         mask(문장의 특정 단어를 가림. BERT가 예측할 수 있게끔. 입력 텍스트의 단어 집합의 15%의 단어를 랜덤으로 마스킹(Masking))**
         
-        ![Untitled](Week1-2%20%E1%84%80%E1%85%AA%208aa8e/Untitled%202.png)
+        ![Untitled 2](https://user-images.githubusercontent.com/94058241/159118126-9e499c5f-96a7-4982-8269-9269a6707189.png)
         
 - **Commonsense reasoning, Semantic Similarity**
     1. 문제 정의
@@ -96,7 +96,7 @@ published: true
             BERT Encoder를 지나서 각각의 MLM과 SSM의 output layer에 산출.
             Final output score : MLM의 값과 SSM의 값의 평균 → S의 대명사가 C일 확률
                 
-                ![Untitled](Week1-2%20%E1%84%80%E1%85%AA%208aa8e/Untitled%203.png)
+                ![Untitled 3](https://user-images.githubusercontent.com/94058241/159118135-57a984d0-0f18-430d-9ef4-c65aa2957ea3.png)
                 
             2. Ablation Study
             
@@ -119,7 +119,7 @@ published: true
             | -SSM | 74.5 | 82.4 | 72.6 | 86.7 |
             | -MLM | 75.1 | 83.7 | 72.3 | 88.3 |
             
-            ![Untitled](Week1-2%20%E1%84%80%E1%85%AA%208aa8e/Untitled%204.png)
+            ![Untitled 4](https://user-images.githubusercontent.com/94058241/159118143-93199b0d-ecb6-40d2-9a9f-60dd3283ce40.png)
             
             1. 논문 요약 키워드 :HNN **키워드 : MLM(자주 언급되는 단어를 예측할 가능성이 높음)  , SSM(맥락에 따른 차이를 구별하는데 효과적, cosine similarity 활용)**
         2. BERTWiki-WSCR(사전 훈련시 사용되는 데이터셋에 대한 연구)
