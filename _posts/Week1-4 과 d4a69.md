@@ -1,0 +1,63 @@
+# Week1-4 과제(최지나)
+
+# 1. 과제 내용
+
+한국 스트리밍 서비스 (왓*, 쿠*플레이, 티*)에서 시청자가 영화를 보고 남긴 리뷰를 긍정과 부정으로 나누어 볼 수 있는 대시보드를 만들려고 한다. 
+
+**리뷰 긍부정 판별 모델**을 만들려고 할 때, NLP 리서처/엔지니어로서 어떤 의사 결정을 할 것인지 각 단계에 맞춰 작성해보자. (단, 수집된 리뷰 데이터의 개수가 1,000개 미만이라고 가정하자.)
+
+[대시 보드 예시](https://www.notion.so/a88d5007855e42cb8eaff006fabc0a1e)
+
+## 1) 문제 정의
+
+- 풀고자 하는 문제를 정의하세요.
+- 또한 데이터 생성 시 고려해야할 사항이 있다면 무엇인지 설명하세요. (예, 만약 긍정 리뷰가 부정 리뷰보다 많은 경우 어떻게 해야 할까?, 길이가 정말 긴 리뷰는 어떻게 전처리 해야 할까?)
+
+1. 긍부정 판별이란 곧 리뷰의 내용의 감정적 극성을 분류하는 것으로 긍정, 부정, 중립으로 나눌 수 있을 것이다. 이번 문제에 대해서는 긍정과 부정으로만 분류한다.
+레이블이 정해져있기 때문에 텍스트 분류로의 task라고도 판단 가능.
+2. 만약 긍정 리뷰가 부정 리뷰보다 많은 경우, AEDA라는 방법 사용.
+
+[AEDA](https://arxiv.org/abs/2108.13230v1) : 문장을 단어 단위로 쪼갰을 때, {".", ";", "?", ":", "!",","}.를 붙여주면서 데이터의 양을 늘리는 것임.
+
+1. 길이가 정말 긴 리뷰에 대한 대응 방안으로 FastText 방식으로 벡터화
+
+FastText : word2vec 방식에 더해서, 철자기반의 임베딩 방식을 통해 말뭉치에 없는 단어를 임베딩 할 경우에 생기는 에러를 방지한다. 철자기반의 임베딩은 단어를 뜯어보면서 단어의 구조를 유추하는 메커니즘
+
+[https://lh6.googleusercontent.com/kbXScRjGmIbGYgLy_YtvPI1NUZn6dNmDUoMABPugfo2uPLLNC6UcuqdeHjA_ZP8__rBTxc-PnQq5pkBoBlf09H7j16qaGxBYwFhCXCFknNxxljZ2qXfBVXUN0Vy0C7X-cqVMWg2n](https://lh6.googleusercontent.com/kbXScRjGmIbGYgLy_YtvPI1NUZn6dNmDUoMABPugfo2uPLLNC6UcuqdeHjA_ZP8__rBTxc-PnQq5pkBoBlf09H7j16qaGxBYwFhCXCFknNxxljZ2qXfBVXUN0Vy0C7X-cqVMWg2n)
+
+## 2) 오픈 데이터 셋 및 벤치 마크 조사
+
+- 리뷰 긍부정 판별 모델에 사용할 수 있는 한국어 데이터 셋이 무엇이 있는지 찾아보고, 데이터 셋에 대한 설명과 링크를 정리하세요. 추가적으로 영어 데이터셋도 있다면 정리하세요.
+1. NSMC (한국어)
+    - 소개: [네이버 영화](https://movie.naver.com/)에서 수집하여 만들어진 데이터 셋
+    - 입력 데이터는 id와 리뷰 내용(document)이며 출력 값은 0(부정) 또는 1(긍정) 이다.
+    - 학습 데이터 : 150K
+    - 테스트 데이터: 50K
+2. imdb (영어)
+    - 소개: Internet Movie DB에서 긍정 또는 부정으로 라벨되어진 이중 감정 분석 시 사용되는 데이터 셋
+    - 입력 데이터는 한 개의 문장이며 출력 값은 0(부정) 또는 1(긍정) 이다.
+    - 학습 데이터 : 25,000
+    - 테스트 데이터: 25,000
+    - 라벨되어지지 않은 데이터 : 50,000
+
+## 3) 모델 조사
+
+- Paperswithcode(https://paperswithcode.com/)에서 리뷰 긍부정 판별 모델로 사용할 수 있는 SOTA 모델을 찾아보고 SOTA 모델의 구조에 대해 간략하게 설명하세요.
+- (모델 논문을 자세히 읽지 않아도 괜찮습니다. 키워드 중심으로 설명해 주세요.)
+
+### A. [SMART-RoBERTa Large](https://paperswithcode.com/paper/smart-robust-and-efficient-fine-tuning-for)
+
+- 대규모 코퍼스에 pre-train 한 모델을 가져와 GLUE 데이터로 fine-tuning.
+    - pre-training 데이터 셋
+        - GLUE의 데이터 셋들 중 WNLI 제외한 데이터셋들
+    - tokenizer
+        - wordpiece 방식
+1. 학습 방식
+- 딥러닝 (Transfer Learning)사전 학습된 모델을 활용하는 (transfer - learning)방식으로 학습하려고 합니다. 이 때 학습 과정을 간략하게 서술해주세요. (예. 데이터 전처리 → 사전 학습된 모델을 00에서 가져옴 → …)
+    - 데이터 전처리(불용어 제거 및 데이터 불균형 해결) → 사전 학습된 모델을 [koBERT](https://github.com/SKTBrain/KoBERT/blob/master/README.md) 에서 가져온다. → NSMC와 분석할 데이터에 대해 koBERT의 tokenizer 활용 →  fine-tuning을 위해 NSMC 사용 → 훈련 → 예측 → 평가
+1. 평가 방식
+- 긍부정 예측 task에서 주로 사용하는 평가 지표를 최소 4개 조사하고 설명하세요.
+    1. accuracy : 전체 데이터 수 중 예측 결과와 실제 값이 동일한 건수(TN + TP)가 차지하는 비율
+    2. F1 scores :F1 Score는 Precision과 Recall의 조화평균으로 주로 분류 클래스 간의 데이터가 불균형이 심각할때 사용
+    3. Recall : 실제가 Positive인 대상(FN + TP) 중 예측과 실제 값이 Positive로 일치한 데이터(TP)의 비율
+    4. Precision : 예측을 Positive로 한 대상(FP + TP) 중 예측과 실제 값이 Positive로 일치한 데이터(TP)의 비율
