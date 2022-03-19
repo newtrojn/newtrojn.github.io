@@ -5,6 +5,7 @@ date: 2022-03-19 18:50:00
 tags: [nlp, subtask, sentiment, txt_classification]
 description: nlp subtask 2개 조사
 comments: true
+published: true
 ---
 # Sentiment Analysis, Text Classification (feat. 원티드 프리온보딩)
 
