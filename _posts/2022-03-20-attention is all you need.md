@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Papers Review #1 'Attention Is All You Need'
+title: Attention Is All You Need-Papers Review
 date: 2022-03-20 00:43:00
 tags: [nlp, BERT, attention, transformer]
 description: 'Attention is all you need' review
