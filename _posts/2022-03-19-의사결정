@@ -1,6 +1,14 @@
-# Week1-4 과제(최지나)
+---
+layout: post
+title: 리뷰 긍부정 판별 모델 생성을 위한 조사
+date: 2022-03-19 20:18:00
+tags: [nlp, subtask, sentiment, txt_classification]
+description: nlp subtask 2개 조사
+comments: true
+published: true
+---
 
-# 1. 과제 내용
+## 1. 과제 내용
 
 한국 스트리밍 서비스 (왓*, 쿠*플레이, 티*)에서 시청자가 영화를 보고 남긴 리뷰를 긍정과 부정으로 나누어 볼 수 있는 대시보드를 만들려고 한다. 
 
@@ -8,7 +16,7 @@
 
 [대시 보드 예시](https://www.notion.so/a88d5007855e42cb8eaff006fabc0a1e)
 
-## 1) 문제 정의
+### 1) 문제 정의
 
 - 풀고자 하는 문제를 정의하세요.
 - 또한 데이터 생성 시 고려해야할 사항이 있다면 무엇인지 설명하세요. (예, 만약 긍정 리뷰가 부정 리뷰보다 많은 경우 어떻게 해야 할까?, 길이가 정말 긴 리뷰는 어떻게 전처리 해야 할까?)
@@ -25,7 +33,7 @@ FastText : word2vec 방식에 더해서, 철자기반의 임베딩 방식을 통
 
 [https://lh6.googleusercontent.com/kbXScRjGmIbGYgLy_YtvPI1NUZn6dNmDUoMABPugfo2uPLLNC6UcuqdeHjA_ZP8__rBTxc-PnQq5pkBoBlf09H7j16qaGxBYwFhCXCFknNxxljZ2qXfBVXUN0Vy0C7X-cqVMWg2n](https://lh6.googleusercontent.com/kbXScRjGmIbGYgLy_YtvPI1NUZn6dNmDUoMABPugfo2uPLLNC6UcuqdeHjA_ZP8__rBTxc-PnQq5pkBoBlf09H7j16qaGxBYwFhCXCFknNxxljZ2qXfBVXUN0Vy0C7X-cqVMWg2n)
 
-## 2) 오픈 데이터 셋 및 벤치 마크 조사
+### 2) 오픈 데이터 셋 및 벤치 마크 조사
 
 - 리뷰 긍부정 판별 모델에 사용할 수 있는 한국어 데이터 셋이 무엇이 있는지 찾아보고, 데이터 셋에 대한 설명과 링크를 정리하세요. 추가적으로 영어 데이터셋도 있다면 정리하세요.
 1. NSMC (한국어)
@@ -40,12 +48,12 @@ FastText : word2vec 방식에 더해서, 철자기반의 임베딩 방식을 통
     - 테스트 데이터: 25,000
     - 라벨되어지지 않은 데이터 : 50,000
 
-## 3) 모델 조사
+### 3) 모델 조사
 
 - Paperswithcode(https://paperswithcode.com/)에서 리뷰 긍부정 판별 모델로 사용할 수 있는 SOTA 모델을 찾아보고 SOTA 모델의 구조에 대해 간략하게 설명하세요.
 - (모델 논문을 자세히 읽지 않아도 괜찮습니다. 키워드 중심으로 설명해 주세요.)
 
-### A. [SMART-RoBERTa Large](https://paperswithcode.com/paper/smart-robust-and-efficient-fine-tuning-for)
+A. [SMART-RoBERTa Large](https://paperswithcode.com/paper/smart-robust-and-efficient-fine-tuning-for)
 
 - 대규모 코퍼스에 pre-train 한 모델을 가져와 GLUE 데이터로 fine-tuning.
     - pre-training 데이터 셋
