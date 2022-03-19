@@ -2,7 +2,6 @@
 layout: post
 title: Sentiment Analysis, Text Classification
 date: 2022-03-19 18:50:00
-categories: [posts]
 tags: [nlp, subtask, sentiment, txt_classification]
 description: nlp subtask 2개 조사
 comments: true
