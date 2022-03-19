@@ -1,48 +1,13 @@
-# Week1-2 과제(최지나)
-
-### 1.  오늘의 과제
-
-- 과제 내용
-    
-    1. Paperswithcode([https://paperswithcode.com/task/natural-language-understanding](https://paperswithcode.com/task/natural-language-understanding))에서 NLU sub task 중 하나를 선택하여 본인 블로그에 정리해보세요. 아래 3가지 항목에 대해서 정리하세요. (각 항목 고려 사항 참고)
-    
-    - 문제 정의
-    
-    - task가 해결하고자 하는 문제가 무엇인가?
-    
-    - 데이터셋 소개(대표적인 데이터셋 1개)
-    
-    - task를 해결하기 위해 사용할 수 있는데 데이터셋이 무엇인가?
-    
-    - 데이터 구조는 어떻게 생겼는가?
-    
-    - SOTA 모델 소개(대표적인 모델 최소 2개 이상)
-    
-    - task의 SOTA 모델은 무엇인가?
-    
-    - 해당 모델 논문의 요약에서 주요 키워드들에 대한 설명
-    
-    ※아래 항목을 하나의 파일로 정리하여 업로드 해주세요.
-    
-    - 본인 아이디 및 닉네임
-    
-    - 게시글 URL
-    
-    - 게시글 캡처
-    
-    2.팀원들의 게시글을 읽고 피드백 댓글을 달아보세요.
-    
-    ※ 아래 항목을 하나의 파일로 정리하여 업로드 해주세요.
-    
-    - 본인 아이디 및 닉네임
-    
-    - 팀원 게시글 URL
-    
-    - 해당 게시글에 작성한 댓글 캡처
-    
-
-### 2. Paperswithcode([https://paperswithcode.com/area/natural-language-processing](https://paperswithcode.com/area/natural-language-processing))에서 NLP sub task 중에 2개를 선택하여 본인 블로그에 정리해보세요. 
-task 별로 아래 3가지 항목에 대해서 정리하세요.
+---
+layout: post
+title: NLU SubTask
+date: 2022-03-19 19:48:00
+tags: [nlp, subtask, nlu, multi_label_classification,multiple_choice,commonsense_reasoning,semantic_similarity]
+description: nlu subtask 3개 조사
+comments: true
+published: true
+---
+# multi-label classification & multiple choice QA, Commonsense reasoning & Semantic Similarity
 
 - **multi-label classification, multiple choice QA**
     1. 문제 정의
