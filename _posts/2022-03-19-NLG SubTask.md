@@ -9,7 +9,7 @@ published: true
 ---
 # Text Summarization, GAN
 
-### 1.  GAN(Generative Adversarial Network), 생성적 적대 신경망
+## 1.  GAN(Generative Adversarial Network), 생성적 적대 신경망
 
 : 컴퓨터가 새로운 데이터를 생성할 수 있는 신경망
 ※ 본 내용은  ‘머신 러닝 교과서 with 파이썬, 사이킷런, 텐서플로(개정 3판)’ 의 내용을 정리함.
@@ -21,7 +21,7 @@ published: true
     - AutoEncoder
     훈련 데이터를 압축하고 해제할 수 있음. Encoder 신경망과 Decoder 신경망 2개가 연결되어 구성.
         
-        ![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled.png)
+        ![Untitled](https://user-images.githubusercontent.com/94058241/159118448-c02307e9-c0df-408d-b845-c8afb5f4911b.png)
         
         인코딩된 벡터 z : 잠재 벡터(latent vector) or 잠재 특성 표현.  → 입력 샘플의 차원보다 작음.  
         ⇒  데이터 압축 기능
@@ -36,7 +36,7 @@ published: true
         
 2. [GAN 구조](https://developers.google.com/machine-learning/gan/gan_structure)
     
-    ![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%201.png)
+    ![Untitled 1](https://user-images.githubusercontent.com/94058241/159118404-5a685a18-4d60-4dc6-8d7e-3f9249199969.png)
     
 - The Discirminator  : 한국어로 ‘판별자’라고 부름. 실제 데이터와 생성자에 의해 생성된 데이터를 구별하는데 쓰임. 판별자(D)에 대해 이 값을 최대화하고 생성자(G)를 최소화 해야함.
 - The Generator : 판별자의 피드백을 통합하여 가짜 데이터를 생성하는 방법을 배움. 이를 통해 판별자가 출력을 실제로 분류하도록 하는 방법 배움.
@@ -46,14 +46,14 @@ Encoder 신경망에서 잠재 벡터 분포의 두 요소 평균과 분산을 �
 VAE를 훈련하는 동안 이 평균과 분산을 표준 정규 분포에 맞추도록 조정함.
 Decoder 신경망에서 가우시안 분포에서 랜덤하게 샘플링한 z 벡터 주입해서 새로운 샘플  y생성.
     
-    ![                                      Latent Space에 있는 분포도를 보면 표준 정규 분포의 모형임](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%202.png)
+    ![                                      Latent Space에 있는 분포도를 보면 표준 정규 분포의 모형임](https://user-images.githubusercontent.com/94058241/159118408-d34037fa-b136-4b30-8d8c-9aaa0c918564.png)
     
                                           Latent Space에 있는 분포도를 보면 표준 정규 분포의 모형임
     
-    ![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%203.png)
+    ![Untitled](https://user-images.githubusercontent.com/94058241/159118409-a7315e9c-ab3e-4681-a4e7-9866cf87b678.png)
     
 
-### 2.  NLG extractive summarization task
+## 2.  NLG extractive summarization task
 
 [Papers with Code - Neural Extractive Text Summarization with Syntactic Compression](https://paperswithcode.com/paper/neural-extractive-text-summarization-with)
 
@@ -91,14 +91,14 @@ The Veendam left New York 36 days ago for a South America tour.'
     BERT는 문장 간의 관계 모델링 전문이기에 선택된 대상의 요약을 위한 의미를 고려하는 기능이 없고, 문장과 문장 사이의 종속성을 고려하지 않음.
     HAHSum(Hierarchical Attentive Heterogeneous Graph for Text Summarization, 텍스트 요약을 위한 계층주의 이질적 그래프)의 경우 중복 인식 그래프로 문장 표현을 반복적으로 개선하고, 메시지 전달을 통해 레이블의 종속성을 전달.
     
-    ![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%204.png)
+    ![Untitled 4](https://user-images.githubusercontent.com/94058241/159118412-6635fc89-2520-4224-8f6c-54eaa9f7594a.png)
     
 
 b. MatchSum
 gold summary와 문서에서 추출된 요약을 일치시키는 알고리즘.
 추출된 요약은 의미상 문서에 더욱 가깝지만 gold summary는 아주 많이 가까움.
 
-![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/94058241/159118417-d412fa6f-75b8-42de-a43b-1ebf600ac4dc.png)
 
 4-1. 논문 키워드 1 **Compression in Summarization**
 
@@ -110,9 +110,9 @@ ex. ‘6.25 전쟁은 남북을 분단 시킨 엄청난 사건이었다. 그리�
 
 4-2. 논문 키워드 2 **Text Compression**
 
-![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%206.png)
+![Untitled 6](https://user-images.githubusercontent.com/94058241/159118425-4e185acc-c687-4bba-b478-8d12807f48df.png)
 
-![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%207.png)
+![Untitled 7](https://user-images.githubusercontent.com/94058241/159118433-26dcced9-b86a-47c8-89cb-425d5e8d73d2.png)
 
 문장 선택 후, 개별 압축 옵션을 평가하고 선택한 문장에서 특정 구 또는 단어를 제거할지 여부를 결정하는 것
 위 이미지에서 ‘PP’는 키워드 1에서 설명 했듯이  제거기준에 해당함.
@@ -130,7 +130,7 @@ Beam Search : 1개의 출력 값이 아닌 Beam 개수(k) 만큼 출력해서 �
 
 </aside>
 
-![Beam Search](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%208.png)
+![Beam Search](https://user-images.githubusercontent.com/94058241/159118441-def3529e-6d68-42d3-958d-8463ae829f10.png)
 
 Beam Search
 
