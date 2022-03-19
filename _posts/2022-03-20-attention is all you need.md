@@ -1,7 +1,13 @@
-# Attention Is All You Need
+---
+layout: post
+title: Papers Review #1 'Attention Is All You Need'
+date: 2022-03-20 00:43:00
+tags: [nlp, BERT, attention, transformer]
+description: 'Attention is all you need' review
+comments: true
+published: true
+---
 
-생성일: 2022년 3월 9일 오후 4:28
-태그: #BERT, #NLP, #attention, #transformer
 
 ### 1. 기존의 자연어 처리
 
