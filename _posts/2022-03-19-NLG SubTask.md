@@ -1,45 +1,15 @@
-# Week1-3 과제(최지나)
+---
+layout: post
+title: NLG SubTask
+date: 2022-03-19 19:59:00
+tags: [nlp, subtask, nlg, GAN, txt_summarization]
+description: nlg papers keyword & concept
+comments: true
+published: true
+---
+# Text Summarization, GAN
 
-### 1.  오늘의 과제
-
-- 과제 내용
-    
-    안녕하세요. AI 심화 과정 수강생 여러분. week1-3 과제 공지해드립니다.
-    
-    **오후 10시까지** 제출 바랍니다.
-    
-    과제 제출 시 파일명을 **'0팀_이름'** 으로 저장해주시기 바랍니다.(확장자는 상관없습니다.)
-    
-    1. Paperswithcode에서 NLG extractive summarization task에 대해서 본인 블로그에 정리해보세요. 아래 3가지 항목에 대해서 정리하세요. (각 항목 고려 사항 참고)
-    
-    - 문제 정의
-    
-    - task가 해결하고자 하는 문제가 무엇인가?
-    
-    - 데이터셋 소개(대표적인 데이터셋 1개)
-    
-    - task를 해결하기 위해 사용할 수 있는데 데이터셋이 무엇인가?
-    
-    - 데이터 구조는 어떻게 생겼는가?
-    
-    - SOTA 모델 소개(대표적인 모델 **최소 2개 이상**)
-    
-    - task의 SOTA 모델은 무엇인가?
-    
-    - 해당 모델 논문의 요약에서 주요 키워드들에 대한 설명
-    
-    ※아래 항목을 하나의 파일로 정리하여 업로드 해주세요.
-    
-    - 본인 아이디 및 닉네임 - 본인 게시글 URL - 본인 게시글 캡처
-    
-    2. 팀원들의 게시글을 읽고 피드백 댓글을 달아보세요.
-    
-    ※아래 항목을 하나의 파일로 정리하여 업로드 해주세요.
-    
-    - 댓글 작성할 때 사용한 본인 아이디 및 닉네임 - 팀원 게시글 URL - 팀원 게시글에 본인이 작성한 댓글 캡처
-    
-
-### 2.  GAN(Generative Adversarial Network), 생성적 적대 신경망
+### 1.  GAN(Generative Adversarial Network), 생성적 적대 신경망
 
 : 컴퓨터가 새로운 데이터를 생성할 수 있는 신경망
 ※ 본 내용은  ‘머신 러닝 교과서 with 파이썬, 사이킷런, 텐서플로(개정 3판)’ 의 내용을 정리함.
@@ -83,7 +53,7 @@ Decoder 신경망에서 가우시안 분포에서 랜덤하게 샘플링한 z �
     ![Untitled](Week1-3%20%E1%84%80%E1%85%AA%20b74eb/Untitled%203.png)
     
 
-### 3.  NLG extractive summarization task
+### 2.  NLG extractive summarization task
 
 [Papers with Code - Neural Extractive Text Summarization with Syntactic Compression](https://paperswithcode.com/paper/neural-extractive-text-summarization-with)
 
